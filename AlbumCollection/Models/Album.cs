@@ -14,5 +14,9 @@ namespace AlbumCollection.Models
 
         public virtual IEnumerable<Song> Songs { get; set; }
 
+        internal static void ToList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
