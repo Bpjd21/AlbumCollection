@@ -11,12 +11,8 @@ namespace AlbumCollection.Models
         public string AlbumName { get; set; }
         public string ArtistName { get; set; }
         public string ImgPath { get; set; }
-
-        public virtual IEnumerable<Song> Songs { get; set; }
-
-        internal static void ToList()
-        {
-            throw new NotImplementedException();
-        }
+        public int SongId { get; set; }
+        
+        public virtual IEnumerable<Song> Songs { get; set; }               
     }
 }
