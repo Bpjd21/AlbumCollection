@@ -22,5 +22,34 @@ namespace AlbumCollection
             base.OnConfiguring(optionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Album>().HasData(
+
+                new Album()
+                {
+                    AlbumId = 1,
+                    AlbumName = "Moana Soundtrack",
+                    ArtistName = "Various Artists",
+                    ImgPath = "/images/Moana_Soundtrack.jpg"
+
+                },
+                new Album()
+                {
+                    AlbumId = 2,
+                    AlbumName = "Top Gun Soundtrack",
+                    ArtistName = "Various Artists",
+                    ImgPath = "/images/top-gun.jpg"
+                },
+                new Album()
+                {
+                    AlbumId = 3,
+                    AlbumName = "Spider Man Into the Spider Verse Soundtrack",
+                    ArtistName = "Various Artisits",
+                    ImgPath = "/images/spider-man-into-the-spider-verse-soundtrack.jpg"
+                });  
+                
+            base.OnModelCreating(modelBuilder);
+        } 
     }   
 }

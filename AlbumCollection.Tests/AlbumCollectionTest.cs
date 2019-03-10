@@ -6,28 +6,28 @@ namespace AlbumCollection.Tests
 {
     public class AlbumCollectionTest
     {
-        AlbumController underTest;
+        //AlbumController underTest;
 
-        [Fact]
-        public void Index_Sets_Model_To_All_Albums()
-        {
-            //Arrange//
-            underTest = new AlbumController();
-            //Action//
+        //[Fact]
+        //public void Index_Sets_Model_To_All_Albums()
+        //{
+        //    //Arrange//
+        //    underTest = new AlbumController();
+        //    //Action//
 
-            //Assert//
+        //    //Assert//
 
-        }
+        //}
 
-        [Fact]
-        public void Details_Sets_Model_To_Correct_Album()
-        {
-            //Arrange//
+        //[Fact]
+        //public void Details_Sets_Model_To_Correct_Album()
+        //{
+        //    //Arrange//
 
-            //Action//
+        //    //Action//
 
-            //Assert//
-        }
+        //    //Assert//
+        //}
 
     }
 }

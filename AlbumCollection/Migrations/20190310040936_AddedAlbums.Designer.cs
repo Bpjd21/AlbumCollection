@@ -3,14 +3,16 @@ using AlbumCollection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AlbumCollection.Migrations
 {
     [DbContext(typeof(AlbumContext))]
-    partial class AlbumContextModelSnapshot : ModelSnapshot
+    [Migration("20190310040936_AddedAlbums")]
+    partial class AddedAlbums
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,7 +22,7 @@ namespace AlbumCollection.Migrations
 
             modelBuilder.Entity("AlbumCollection.Models.Album", b =>
                 {
-                    b.Property<int>("AlbumId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -30,20 +32,22 @@ namespace AlbumCollection.Migrations
 
                     b.Property<string>("ImgPath");
 
-                    b.HasKey("AlbumId");
+                    b.Property<int>("SongId");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Albums");
 
                     b.HasData(
-                        new { AlbumId = 1, AlbumName = "Moana Soundtrack", ArtistName = "Various Artists", ImgPath = "/images/Moana_Soundtrack.jpg" },
-                        new { AlbumId = 2, AlbumName = "Top Gun Soundtrack", ArtistName = "Various Artists", ImgPath = "/images/top-gun.jpg" },
-                        new { AlbumId = 3, AlbumName = "Spider Man Into the Spider Verse Soundtrack", ArtistName = "Various Artisits", ImgPath = "/images/spider-man-into-the-spider-verse-soundtrack.jpg" }
+                        new { Id = 1, AlbumName = "Moana Soundtrack", ArtistName = "Various Artists", ImgPath = "/images/Moana_Soundtrack.jpg", SongId = 0 },
+                        new { Id = 2, AlbumName = "Top Gun Soundtrack", ArtistName = "Various Artists", ImgPath = "/images/top-gun.jpg", SongId = 0 },
+                        new { Id = 3, AlbumName = "Spider Man Into the Spider Verse Soundtrack", ArtistName = "Various Artisits", ImgPath = "/images/spider-man-into-the-spider-verse-soundtrack.jpg", SongId = 0 }
                     );
                 });
 
             modelBuilder.Entity("AlbumCollection.Models.Song", b =>
                 {
-                    b.Property<int>("SongId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -53,7 +57,7 @@ namespace AlbumCollection.Migrations
 
                     b.Property<string>("SongName");
 
-                    b.HasKey("SongId");
+                    b.HasKey("Id");
 
                     b.HasIndex("AlbumId");
 

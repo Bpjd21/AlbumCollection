@@ -20,5 +20,11 @@ namespace AlbumCollection.Controllers
         {
             return View();
         }       
+
+        public ViewResult Details( int id)
+        {
+            var model = songRepo.GetById(id);
+            return View(model);
+        }
     }
 }
