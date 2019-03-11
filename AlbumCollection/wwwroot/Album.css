@@ -92,8 +92,11 @@ footer{
 
 .AlbumSongs ul {
     justify-content: center;
-    list-style: none;
-    
+    list-style: none;    
+}
+
+.AlbumSongs h2{
+    font-size: 2rem;
 }
 
 table {
@@ -101,6 +104,7 @@ table {
     text-align: left;
     padding: 1rem;
     padding-bottom: 4rem;
+    font-size: 2rem;
 }
 
     table tr {
@@ -117,6 +121,7 @@ table {
 .AddSong a{
     text-decoration: none;
     color: blue;
+    font-size: 2rem;
 }
 
 /*Create Page CSS*/
