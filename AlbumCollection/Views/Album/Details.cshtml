@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <i id="movie" class="fas fa-film"></i><a href="/Album/Details/">Soundtracks</a>
+       <i id="movie" class="fas fa-film"></i><span class="Title">Movie Soundtracks</span>
     </header>
 
     <div class="Bg2"></div>
@@ -25,7 +25,7 @@
         <h1>@Model.AlbumName</h1>
     </div>
     <div class="AlbumSongs">
-        <p><img src="@Model.ImgPath" /></p>
+        <p><img src="@Model.ImgPath" style="width: 20rem; height: 20rem" /></p>
 
         <h2>List Of Songs:</h2>
         <table>
@@ -38,7 +38,7 @@
             }
         </table>
         <div class="AddSong">
-            <a href="/Album/Create/">Add Your Own Song</a>
+            <a href="/Song/Create/@Model.AlbumId">Add Your Own Song</a>
         </div>
     </div>
     <footer>

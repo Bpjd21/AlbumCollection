@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace AlbumCollection.Models
 {
@@ -8,8 +9,7 @@ namespace AlbumCollection.Models
         public string AlbumName { get; set; }
         public string ArtistName { get; set; }
         public string ImgPath { get; set; }
-        //public int SongId { get; set; }
-        
-        public virtual IEnumerable<Song> Songs { get; set; }               
+
+        public virtual IEnumerable<Song> Songs { get; set; }
     }
 }

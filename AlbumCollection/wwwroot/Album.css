@@ -10,7 +10,7 @@
      font-family: 'Indie Flower', cursive;
      padding-top: 1vh;
      padding-bottom: 1vh;
-     align-items: center;
+     align-items: center;     
  }
   
  header a{
@@ -22,6 +22,11 @@
 #movie {
     font-size: 6rem;
     color: deepskyblue;
+}
+
+.Title{
+    font-size: 2rem;
+    color:blue;
 }
 
  .Bg {
@@ -73,8 +78,7 @@ footer{
     background-position: center;
 }
 
-.AlbumName h1{
-    font-size: 4vw;
+.AlbumName h1{    
     text-align: center;
     color: black;
     padding-top: 1rem;
@@ -105,3 +109,20 @@ table {
         font-weight: 500;
         padding-bottom: 4rem;
     }
+/*Create Page CSS*/
+
+.CreateHeading{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.Container {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+fieldset {
+    display: inline;
+    background-color: aliceblue;
+    font-size: 1.5rem;
+}

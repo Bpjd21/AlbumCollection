@@ -1,4 +1,5 @@
-﻿using AlbumCollection.Repositories;
+﻿using AlbumCollection.Models;
+using AlbumCollection.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlbumCollection.Controllers
@@ -22,6 +23,6 @@ namespace AlbumCollection.Controllers
         {
             var model = albumRepo.GetById(id);
             return View(model);
-        }
+        }       
     }
 }
