@@ -25,7 +25,7 @@
         <ul>
             @foreach (var Album in Model)
             {
-            <li>@Album.AlbumName<br />@Album.ArtistName<br /><a href="./Album/Details/@Album.AlbumId"><img src="@Album.ImgPath" style="width: 20rem; height: 20rem" /></a></li>
+            <li>@Album.AlbumName<br />@Album.ArtistName<br /><a href="/Album/Details/@Album.AlbumId"><img src="@Album.ImgPath" style="width: 20rem; height: 20rem" /></a></li>
             }
         </ul>
     </div>
