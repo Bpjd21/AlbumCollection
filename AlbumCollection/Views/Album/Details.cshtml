@@ -9,10 +9,40 @@
 
 <html>
 <head>
-
+    <link href="~/Album.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Courgette|Indie+Flower|Merriweather|Permanent+Marker" rel="stylesheet">
     <meta name="viewport" content="width=device-width" inital-scale="1.0" />
-    <title>Details</title>
+    <title>Songs on Album</title>
 </head>
 <body>
+    <header>
+        <i id="movie" class="fas fa-film"></i><a href="/Album/Details/">Soundtracks</a>
+    </header>
+
+    <div class="Bg2"></div>
+    <div class="AlbumName">
+        <h1>@Model.AlbumName</h1>
+    </div>
+    <div class="AlbumSongs">
+        <p><img src="@Model.ImgPath" /></p>
+
+        <h2>List Of Songs:</h2>
+        <table>
+            @foreach (var song in Model.Songs)
+            {
+
+                <tr>
+                    <td>@song.SongName  - Song Performed By: &nbsp;&nbsp; @song.Performer</td>                  
+                </tr>
+            }
+        </table>
+        <div class="AddSong">
+            <a href="/Album/Create/">Add Your Own Song</a>
+        </div>
+    </div>
+    <footer>
+        &copy;&nbsp;&nbsp;2019
+    </footer>
 </body>
 </html>

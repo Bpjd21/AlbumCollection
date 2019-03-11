@@ -9,18 +9,32 @@
 
 <html>
 <head>
+    <link href="~/Album.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Courgette|Indie+Flower|Merriweather|Permanent+Marker" rel="stylesheet">
     <meta name="viewport" content="width=device-width" inital-scale="1.0" />
     <title>Sountracks from 2018 Reviews Site</title>
 </head>
 <body>
     <header>
-
+        <i id="movie" class="fas fa-film"></i><a href="/Album/Details/">Soundtracks</a>
     </header>
 
-    @foreach (var Album in Model){
-    
-        <li><img src="@Album.ImgPath" /></li>
-    }
+    <div class="Bg">
+        <h1>The 3 Greatest Movie Soundtracks of All Time....Sort Of</h1>
+    </div>
 
-</body>
+    <div class="AlbumList">
+        <ul>
+            @foreach (var Album in Model)
+            {
+            <li>@Album.AlbumName<br />@Album.ArtistName<br /><a href="./Album/Details/@Album.AlbumId"><img src="@Album.ImgPath" style="width: 20rem; height: 20rem" /></a></li>
+            }
+        </ul>
+    </div>
+    <footer>
+        &copy;&nbsp;&nbsp;2019
+    </footer>
+
+    </body>
 </html>

@@ -47,9 +47,58 @@ namespace AlbumCollection
                     AlbumName = "Spider Man Into the Spider Verse Soundtrack",
                     ArtistName = "Various Artisits",
                     ImgPath = "/images/spider-man-into-the-spider-verse-soundtrack.jpg"
-                });  
-                
-            base.OnModelCreating(modelBuilder);
+                });
+
+            modelBuilder.Entity<Song>().HasData(
+                new Song()
+                {
+                    SongId = 1,
+                    Performer = "Auliʻi Cravalho",
+                    SongName = "How Far I'll Go",
+                    AlbumId = 1
+                },
+
+                new Song()
+                {
+                    SongId = 2,
+                    Performer = "Dwyane The Rock Johnson",
+                    SongName = "You're Welcome",
+                    AlbumId = 1
+                },
+
+                 new Song()
+                 {
+                     SongId = 3,
+                     Performer = "Kenny Loggins",
+                     SongName = "Danger Zone",
+                     AlbumId = 2
+                 },
+
+                 new Song()
+                 {
+                     SongId = 4,
+                     Performer = "The Righteous Brothers ",
+                     SongName = "You've Lost That Lovin' Feeling",
+                     AlbumId = 2
+                 },
+
+                 new Song()
+                 {
+                     SongId = 5,
+                     Performer = "Thutmose",
+                     SongName = "Memories",
+                     AlbumId = 3
+                 },
+                 
+                 new Song()
+                 {
+                     SongId = 6,
+                     Performer = "Amine",
+                     SongName = "Invincible",
+                     AlbumId = 3
+                 });               
+
+           base.OnModelCreating(modelBuilder);
         } 
     }   
 }

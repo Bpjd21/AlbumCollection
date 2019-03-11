@@ -1,0 +1,107 @@
+﻿ * {
+     margin: 0;
+ }
+
+ header{
+     display: flex;
+     flex-direction:row;
+     justify-content:space-around;
+     height: 13vh;
+     font-family: 'Indie Flower', cursive;
+     padding-top: 1vh;
+     padding-bottom: 1vh;
+     align-items: center;
+ }
+  
+ header a{
+     text-decoration: none;
+     color:black;
+     font-size: 3rem;
+ }
+
+#movie {
+    font-size: 6rem;
+    color: deepskyblue;
+}
+
+ .Bg {
+     background-image: url(/Images/Background.jpg);
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-position:center;
+     height: 55vh;
+ }
+
+ .Bg h1 {
+     color:aliceblue;
+     font-size: 5vw;
+     font-family: 'Indie Flower', cursive;
+     text-align:center;
+ }
+
+ .AlbumList{
+     text-align:center;
+     padding: 0;
+ }
+    .AlbumList ul {
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    }
+    .AlbumList li {
+        margin: 1rem 2rem;
+        display: inline-block;
+        grid-gap: 1px;
+        font-size: 3rem;
+    }
+
+footer{
+    background-color:slategray;
+    color:black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align:center;
+}
+
+/*Album details CSS*/
+
+.Bg2 {
+    background-image: url(/Images/Movie-Details-Background.jpg);
+    background-size: cover;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.AlbumName h1{
+    font-size: 4vw;
+    text-align: center;
+    color: black;
+    padding-top: 1rem;
+}
+
+.AlbumSongs {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.AlbumSongs ul {
+    justify-content: center;
+    list-style: none;
+    
+}
+
+table {
+    display: inline;
+    text-align: left;
+    padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+    table tr {
+        padding: 15px;
+        font-family:'Indie Flower', cursive;
+        font-weight: 500;
+        padding-bottom: 4rem;
+    }
