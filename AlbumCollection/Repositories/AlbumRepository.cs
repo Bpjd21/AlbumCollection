@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace AlbumCollection.Repositories
 {
     public class AlbumRepository : IAlbumRepository

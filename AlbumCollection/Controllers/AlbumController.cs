@@ -1,17 +1,16 @@
-﻿using AlbumCollection.Models;
-using AlbumCollection.Repositories;
+﻿using AlbumCollection.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlbumCollection.Controllers
 {
     public class AlbumController : Controller
     {
-        AlbumRepository albumRepo;
+        IAlbumRepository albumRepo;        
 
-        public AlbumController(AlbumRepository albumRepo)
+        public AlbumController(IAlbumRepository albumRepo)
         {
             this.albumRepo = albumRepo;
-        }
+        }       
 
         public ViewResult Index()
         {

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AlbumCollection.Repositories
 {
-    public class SongRepository : ISongRepository
+    public class SongRepository
     {
         AlbumContext db;
 
@@ -25,7 +25,6 @@ namespace AlbumCollection.Repositories
 
         public void Create(Song song)
         {
-
             db.Songs.Add(song);
             db.SaveChanges();
         }

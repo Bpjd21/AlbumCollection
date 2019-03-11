@@ -105,10 +105,20 @@ table {
 
     table tr {
         padding: 15px;
-        font-family:'Indie Flower', cursive;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 500;
         padding-bottom: 4rem;
     }
+
+.AddSong{
+    padding-top: 1rem;
+}    
+
+.AddSong a{
+    text-decoration: none;
+    color: blue;
+}
+
 /*Create Page CSS*/
 
 .CreateHeading{
